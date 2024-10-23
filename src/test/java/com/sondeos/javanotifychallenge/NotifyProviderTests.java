@@ -29,7 +29,7 @@ class NotifyProviderTests {
     }
 
     @Test
-    void sendSMSInvalidDestination() {
+    void sendSMSWithInvalidDestination() {
         String destination = "123";
         String message = "Hello from Java Notify Challenge!";
         HttpClientErrorException exception = assertThrows(HttpClientErrorException.class, () -> {
@@ -37,6 +37,17 @@ class NotifyProviderTests {
         });
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
     }
+
+    @Test
+    void sendSMSWithInvalidMessage() {
+        String destination = "1122334455";
+        String message = "The Java Notify Challenge is designed to test not only your skills but your patience and persistence. You've shown incredible resolve, and we encourage you to continue pushing your limits.";
+        HttpClientErrorException exception = assertThrows(HttpClientErrorException.class, () -> {
+            notifyProvider.notify("sms", destination, message);
+        });
+        assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
+    }
+
 
 
     @Test
@@ -50,7 +61,7 @@ class NotifyProviderTests {
 
 
     @Test
-    void sendSMSInvalidEmail() {
+    void sendEmailWithInvalidDestination() {
         String destination = "challenge-invalid-email";
         String message = "Hello from Java Notify Challenge!";
         HttpClientErrorException exception = assertThrows(HttpClientErrorException.class, () -> {
