@@ -474,7 +474,7 @@ public class NotificationRepository {
                createNotification("24", "email", "You're doing great in the Java Notify Challenge!"),
                createNotification("39", "sms", "Keep participating in the Java Notify Challenge!"),
                createNotification("14", "email", "Thanks for staying with the Java Notify Challenge!"),
-               createNotification("12", "sms", "Notification successfully sent from the Java Notify Challenge!"),
+               createNotification("12", "email", "Notification successfully sent from the Java Notify Challenge!"),
                createNotification("35", "email", "Great progress in the Java Notify Challenge!"),
                createNotification("21", "sms", "Good morning from the Java Notify Challenge!"),
                createNotification("1", "email", "You're making great progress in the Java Notify Challenge!"),
