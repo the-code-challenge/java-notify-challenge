@@ -15,12 +15,12 @@ public class ContactProvider {
 
         String url = "http://notify.showvlad.com/api/contact/"+id;
 
-        ContactDto result = httpClient.get()
+        ContactDto contact = httpClient.get()
                 .uri(url)
                 .retrieve()
                 .body(ContactDto.class);
 
-        return result;
+        return contact;
     }
 
 

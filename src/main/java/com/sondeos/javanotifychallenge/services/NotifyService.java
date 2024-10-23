@@ -35,7 +35,7 @@ public class NotifyService {
         NotificationRepository.getNotifications().forEach(n -> {
 
             //Procesamos cada notificación
-            Boolean r = this.sendNotification(n.getType(), n.getContactId(), n.getMessage());
+            Boolean r = this.sendNotification(n.get("type"), n.get("contactId"), n.get("message"));
 
             //Incrementamos el contador de notificaciones procesadas
             processed.getAndIncrement();
