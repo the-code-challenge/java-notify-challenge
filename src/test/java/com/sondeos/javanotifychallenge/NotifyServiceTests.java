@@ -20,7 +20,7 @@ class NotifyServiceTests {
         NotificationProcessResult result = notifyService.processNotifications();
         System.out.println(result.toString());
         assertEquals(535, result.getProcessed());
-        assertTrue(result.getSent() > 500);
+        assertTrue(result.getSent() > 520);
         assertTrue(result.getDuration() < 30);
     }
 

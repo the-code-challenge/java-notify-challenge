@@ -8,11 +8,15 @@ El objetivo de este challenge es evaluar tus habilidades en Programación Orient
 
 ## Descripción del Challenge
 
-Se te proporciona un código base para completar el desarrollo de un procesador de notificaciones. Este procesador interactúa con una API externa para enviar notificaciones a contactos especificados.
+Se te proporciona un código base para terminar de completar el desarrollo de un procesador de notificaciones. Este procesador interactúa con una API externa para enviar notificaciones a contactos especificados.
 
 ---
 
-### API de Proveedor de notificaciones EMAIL & SMS
+### API
+Se pone a disposición una API que expone 3 endpoints necesarios
+para realizar el challenge.
+
+Se advierte que la API puede presentar eventualmente problemas temporales de congestion.
 
 #### Endpoint: Obtener contactos
 **url**: http://notify.showvlad.com/api/contact/:id  
@@ -39,17 +43,17 @@ Se te proporciona un código base para completar el desarrollo de un procesador 
     - **Método `getContact(id)`**: Obtiene los datos del contacto mediante su ID. Retorna el nombre, apellido, email y teléfono del contacto.
 
 2. **SmsProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones SMS.
-   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo SMS.
+   - **Método `notify(destination, message)`**: Envía notificaciones de tipo SMS.
 
 3. **EmailProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones Email.
-   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo email.
+   - **Método `notify(destination, message)`**: Envía notificaciones de tipo email.
 
 4. **NotifyRepository** Provee una lista de notificaciones a procesar.
     - **Método `getNotifications()`**: Retorna una lista de notificaciones que deben ser procesadas. Cada notificación incluye  `contactId` (identificador de contacto), `type` (Tipo de notificación: email|sms) y `message` (mensaje a enviar).
 
 5. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
-    - **Método `processNotifications()`**: Obtiene las notificaciones del `NotifyRepository`, las recorre e invoca al método `sendNotification()` para cada una. Además, se contabiliza las notificaciones procesadas, las enviadas y la duración del procesamiento.
-    - **Método `dispatchNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Tu tarea principal será completar este método.
+    - **Método `processNotifications()`**: Obtiene las notificaciones del `NotifyRepository`, las recorre e invoca al método `dispatchNotification()` para cada una. Además, contabiliza las notificaciones procesadas, las enviadas y la duración del procesamiento.
+    - **Método `dispatchNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Parte de tu tarea será completar este método.
 
    
 ### Problemas Intencionales
