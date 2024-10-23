@@ -14,7 +14,7 @@ public class NotificationRepository {
         return notification;
     }
 
-   static public Iterable<Map<String, String>> getNotifications(){
+   static public List<Map<String, String>> getNotifications(){
 
        return List.of(
                createNotification("44", "email", "We hope you enjoy the Java Notify Challenge!"),
