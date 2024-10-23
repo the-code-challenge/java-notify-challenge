@@ -51,10 +51,11 @@ public class NotifyService {
 
     /*
     * Debe procesar cada notificación y enviarla usando el proveedor de notificaciones (NotifyProvider)
+    * Se pueden implementar clases, interfaces o utilidades adicionales para enviar las notificaciones
     * Debe retornar true si la notificación se envió correctamente, false en caso contrario
     */
     public Boolean sendNotification(String type, String contactId, String message){
-        //throw new RuntimeException("Not implemented yet");
-        return true;
+        throw new RuntimeException("Not implemented yet");
+
     }
 }
