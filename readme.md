@@ -19,8 +19,14 @@ Se te proporciona un código base para completar el desarrollo de un procesador 
 **method**: GET  
 **response**: {id: String, name: String, surname: String, email:String, phoneNumber: String}
 
-#### Endpoint: Enviar notificacion
-**url**: http://notify.showvlad.com/api/notify/:type  (type: sms|email)  
+#### Endpoint: Enviar notificacion SMS
+**url**: http://notify.showvlad.com/api/notify/sms  
+**method**: POST  
+**body**: {destination: String, message: String}  
+**response**: {status: String, uuid: String}
+
+#### Endpoint: Enviar notificacion EMAIL
+**url**: http://notify.showvlad.com/api/notify/email  
 **method**: POST  
 **body**: {destination: String, message: String}  
 **response**: {status: String, uuid: String}
@@ -32,22 +38,25 @@ Se te proporciona un código base para completar el desarrollo de un procesador 
 1. **ContactProvider** Implementa una integración básica a la API HTTP del proveedor de contactos.
     - **Método `getContact(id)`**: Obtiene los datos del contacto mediante su ID. Retorna el nombre, apellido, email y teléfono del contacto.
 
-2. **NotifyProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones.
-   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo email o SMS.
+2. **SmsProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones SMS.
+   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo SMS.
 
-3. **NotifyRepository** Provee una lista de notificaciones a procesar.
-    - **Método `getNotifications()`**: Retorna una lista de notificaciones que deben ser procesadas. Cada notificación incluye el `contactId`, el `type` (email|sms) y el `message` a ser enviado.
+3. **EmailProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones Email.
+   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo email.
 
-4. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
+4. **NotifyRepository** Provee una lista de notificaciones a procesar.
+    - **Método `getNotifications()`**: Retorna una lista de notificaciones que deben ser procesadas. Cada notificación incluye  `contactId` (identificador de contacto), `type` (Tipo de notificación: email|sms) y `message` (mensaje a enviar).
+
+5. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
     - **Método `processNotifications()`**: Obtiene las notificaciones del `NotifyRepository`, las recorre e invoca al método `sendNotification()` para cada una. Además, se contabiliza las notificaciones procesadas, las enviadas y la duración del procesamiento.
     - **Método `dispatchNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Tu tarea principal será completar este método.
 
    
 ### Problemas Intencionales
 
-El challenge incluye algunos problemas intencionales que deberás resolver:
+El challenge incluye algunos problemas a considerar:
 
-- Validación de datos y formatos
+- Validación de datos
 - Posibilidad de errores en integración HTTP
 - Delay en integración HTTP
 

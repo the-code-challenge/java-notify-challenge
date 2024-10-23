@@ -8,15 +8,15 @@ import org.springframework.web.client.RestClient;
 /* Esta clase y sus métodos pueden ser modificados si se requiere */
 
 @Component
-public class NotifyProvider {
+public class EmailProvider {
 
 
-    public NotifyResultDto notify(String type, String destination, String message){
+    public NotifyResultDto notify(String destination, String message){
 
         NotifyPayloadDto payload = new NotifyPayloadDto(destination,message);
 
         RestClient httpClient = RestClient.create();
-        String url = "http://notify.showvlad.com/api/notify/"+type;
+        String url = "http://notify.showvlad.com/api/notify/email";
 
         NotifyResultDto result = httpClient.post()
                 .uri(url)
