@@ -68,7 +68,7 @@ El challenge incluye algunos problemas a considerar:
 
 1. Descarga el código base proporcionado.
 2. Implementa las clases, interfaces y patrones que creas conveniente para manejar los diferentes tipos de notificaciones.
-3. Implementa la lógica necesaria en el método `dispatchNotification()` de la clase `NotifyService` para despachar cada notificación.
+3. Implementa la lógica necesaria en el método `dispatchNotification()` de la clase `NotifyService` para procesar cada notificación.
 4. Ajusta la lógica necesaria en el método `processNotification()` de la clase `NotifyService` para mejorar la performance.
 5. Asegúrate de manejar adecuadamente los errores y optimizar el rendimiento.
 6. Realiza las pruebas necesarias para verificar el correcto funcionamiento de tu implementación.
