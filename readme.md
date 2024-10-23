@@ -40,7 +40,7 @@ Se te proporciona un código base para completar el desarrollo de un procesador 
 
 4. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
     - **Método `processNotifications()`**: Obtiene las notificaciones del `NotifyRepository`, las recorre e invoca al método `sendNotification()` para cada una. Además, se contabiliza las notificaciones procesadas, las enviadas y la duración del procesamiento.
-    - **Método `sendNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Tu tarea principal será completar este método.
+    - **Método `dispatchNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Tu tarea principal será completar este método.
 
    
 ### Problemas Intencionales

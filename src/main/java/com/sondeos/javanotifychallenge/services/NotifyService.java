@@ -35,7 +35,7 @@ public class NotifyService {
         NotificationRepository.getNotifications().forEach(n -> {
 
             //Procesamos cada notificación
-            Boolean r = this.sendNotification(n.get("type"), n.get("contactId"), n.get("message"));
+            Boolean r = this.dispatchNotification(n.get("type"), n.get("contactId"), n.get("message"));
 
             //Incrementamos el contador de notificaciones procesadas
             processed.getAndIncrement();
@@ -59,7 +59,7 @@ public class NotifyService {
     * Se pueden implementar clases, interfaces o utilidades adicionales para enviar las notificaciones
     * Debe retornar true si la notificación se envió correctamente, false en caso contrario
     */
-    public Boolean sendNotification(String type, String contactId, String message){
+    public Boolean dispatchNotification(String type, String contactId, String message){
         throw new RuntimeException("Not implemented yet");
 
     }
