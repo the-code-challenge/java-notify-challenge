@@ -17,6 +17,9 @@ public class NotifyService {
     NotifyProvider notifyProvider;
 
 
+    /*
+    * Procesa todas las notificaciones y devuelve un objeto con el número de notificaciones procesadas, enviadas y el tiempo de procesamiento
+    */
     public NotificationProcessResult processNotifications(){
 
         //Iniciamos contador de tiempo

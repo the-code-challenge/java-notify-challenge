@@ -26,7 +26,7 @@ public class MainController {
 
         NotificationProcessResult r = notifyService.processNotifications();
 
-        return "{\"sent\": " + r.getSent() + ", \"duration\": " + r.getDuration() + "}";
+        return "{ \"processed\": " + r.getProcessed() + ",  \"sent\": " + r.getSent() + ", \"duration\": " + r.getDuration() + "}";
 
     }
 
