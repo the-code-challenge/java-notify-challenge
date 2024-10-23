@@ -1,6 +1,6 @@
 package com.sondeos.javanotifychallenge.services;
 
-import com.sondeos.javanotifychallenge.notifications.NotificationRepository;
+import com.sondeos.javanotifychallenge.repository.NotificationRepository;
 import com.sondeos.javanotifychallenge.providers.NotifyProvider;
 import com.sondeos.javanotifychallenge.services.dto.NotificationProcessResult;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,12 @@
-package com.sondeos.javanotifychallenge.notifications;
+package com.sondeos.javanotifychallenge.repository.dto;
 
-public class Notification {
+public class NotificationDto {
 
     String contactId;
     String type;
     String message;
 
-    public Notification(String contactId, String type, String message) {
+    public NotificationDto(String contactId, String type, String message) {
         this.contactId = contactId;
         this.type = type;
         this.message = message;
