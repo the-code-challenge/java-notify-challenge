@@ -6,6 +6,8 @@ import com.sondeos.javanotifychallenge.providers.dto.NotifyResultDto;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
+/* Esta clase y sus métodos pueden ser modificados si se requiere */
+
 @Component
 public class NotifyProvider {
 

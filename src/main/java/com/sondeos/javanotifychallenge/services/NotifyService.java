@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/* Esta clase y sus métodos deben ser modificados para cumplir el challenge */
+
 @Component
 public class NotifyService {
 
@@ -50,7 +52,7 @@ public class NotifyService {
     }
 
     /*
-    * Debe procesar cada notificación y enviarla usando el proveedor de notificaciones (NotifyProvider)
+    * Debe procesar cada notificación e intentar enviarla.
     * Se pueden implementar clases, interfaces o utilidades adicionales para enviar las notificaciones
     * Debe retornar true si la notificación se envió correctamente, false en caso contrario
     */
