@@ -29,14 +29,16 @@ Se te proporciona un código base para completar el desarrollo de un procesador 
 
 ### Clases Proporcionadas
 
-1. **NotifyProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones.
+1. **ContactProvider** Implementa una integración básica a la API HTTP del proveedor de contactos.
     - **Método `getContact(id)`**: Obtiene los datos del contacto mediante su ID. Retorna el nombre, apellido, email y teléfono del contacto.
-    - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo email o SMS.
 
-2. **NotifyRepository** Provee una lista de notificaciones a procesar.
+2. **NotifyProvider** Implementa una integración básica a la API HTTP del proveedor de notificaciones.
+   - **Método `notify(type, destination, message)`**: Envía notificaciones de tipo email o SMS.
+
+3. **NotifyRepository** Provee una lista de notificaciones a procesar.
     - **Método `getNotifications()`**: Retorna una lista de notificaciones que deben ser procesadas. Cada notificación incluye el `contactId`, el `type` (email|sms) y el `message` a ser enviado.
 
-3. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
+4. **NotifyService** Se ocupa de procesar y enviar las notificaciones.
     - **Método `processNotifications()`**: Obtiene las notificaciones del `NotifyRepository`, las recorre e invoca al método `sendNotification()` para cada una. Además, se contabiliza las notificaciones procesadas, las enviadas y la duración del procesamiento.
     - **Método `sendNotification(type, contactId, message)`**: Actualmente lanzará una excepción indicando que la implementación aún no está hecha. Tu tarea principal será completar este método.
 
