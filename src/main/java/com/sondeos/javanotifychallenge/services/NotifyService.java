@@ -1,9 +1,7 @@
 package com.sondeos.javanotifychallenge.services;
 
 import com.sondeos.javanotifychallenge.repository.NotificationRepository;
-import com.sondeos.javanotifychallenge.providers.NotifyProvider;
 import com.sondeos.javanotifychallenge.services.dto.NotificationProcessResult;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -12,9 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public class NotifyService {
-
-    @Autowired
-    NotifyProvider notifyProvider;
 
 
     /*
