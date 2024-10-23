@@ -83,18 +83,22 @@ En la seccion de test hay una prueba que verificará:
 - Si se enviaron las notificaciones esperadas.
 - Si el tiempo de procesamiento es óptimo.
 
-## Entrega
-
-Por favor, sube tu solución a un repositorio público de GitHub y comparte el enlace para que pueda ser revisada.
 
 ## Valoraciones
 
 - Se valora que se puedan procesar todas las notificaciones
-- Se valora el manejo de errores y validaciones
-- Se valora que se puedan enviar todas las notificaciones posibles
-- Se valora la optimización de los tiempos de procesamiento
-- Se valora la implementación de patrones de POO como Factory Method, Strategy, Singleton
+- Se valora realizar validaciones
+- Se valora el manejo de errores
+- Se valora que se envíen todas las notificaciones que cumplan los requisitos del proveedor
+- Se valora contemplar problemas temporales de congestion del proveedor de sms/email
+- Se valora la optimización de los tiempos de procesamiento (ej: Cache, Paralelización)
+- Se valora la implementación de patrones de diseño (ej: Factory Method, Strategy, Singleton, etc)
 - Se valora la creación de test adicionales
+
+
+## Entrega
+
+Por favor, sube tu solución a un repositorio público de GitHub y comparte el enlace para que pueda ser revisada.
 
 ---
 
