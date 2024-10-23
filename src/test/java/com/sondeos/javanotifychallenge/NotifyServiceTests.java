@@ -1,6 +1,5 @@
 package com.sondeos.javanotifychallenge;
 
-import com.sondeos.javanotifychallenge.providers.dto.ContactDto;
 import com.sondeos.javanotifychallenge.services.NotifyService;
 import com.sondeos.javanotifychallenge.services.dto.NotificationProcessResult;
 import org.junit.jupiter.api.Test;
