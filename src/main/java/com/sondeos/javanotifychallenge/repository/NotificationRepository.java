@@ -16,8 +16,7 @@ public class NotificationRepository {
 
    static public List<Map<String, String>> getNotifications(){
 
-       List<Map<String, String>> notification = List.of(
-
+       return List.of(
                createNotification("24", "email", "¡Obtén un 20% de descuento en tu próxima compra!"),
                createNotification("6", "sms", "Recuerda que tu cita es mañana a las 10 AM."),
                createNotification("18", "sms", "Tu cuenta ha sido bloqueada por actividad sospechosa."),
@@ -71,6 +70,7 @@ public class NotificationRepository {
                createNotification("3", "email", "¡Gracias por ser parte de nuestra comunidad!"),
                createNotification("20", "email", "Tu sesión ha expirado, por favor inicia sesión nuevamente."),
                createNotification("15", "sms", "¡Oferta especial solo por hoy!"),
+               createNotification("25", "sms", "¡Obtén un 30% de descuento en tu próxima compra!"),
                createNotification("24", "sms", "Tu cuenta ha sido actualizada con éxito."),
                createNotification("4", "sms", "Recuerda que tu cita es mañana a las 10 AM."),
                createNotification("23", "email", "¡Nuevas funciones disponibles en nuestra aplicación!"),
@@ -217,7 +217,9 @@ public class NotificationRepository {
                createNotification("4", "sms", "Hemos actualizado nuestros términos y condiciones."),
                createNotification("10", "email", "Tu sesión ha expirado, por favor inicia sesión nuevamente."),
                createNotification("9", "sms", "Recuerda que tu suscripción se renueva mañana.")
-                      ); return notification;
+
+
+       );
    }
 
 }
